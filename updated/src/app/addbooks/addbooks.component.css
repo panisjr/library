@@ -1,0 +1,264 @@
+html {
+    background-color: #0A4D96;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0A4D96;
+}
+
+.navigation {
+    background-color: #0A4D96;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 12px;
+}
+
+.navi-header button {
+    border: none;
+    background-color: #0A4D96;
+    color: #ffffff !important;
+    font-size: 22px;
+}
+
+.nav-selection li .nav-label-title {
+    color: #ffffff !important;
+    font-size: 20px;
+}
+
+.content {
+    /* border: 1px solid red; */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.content .inventory-row {
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 20px;
+}
+
+.upper-label {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.upper-label:hover {
+    color: #ffffff;
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.book-list-container {
+    border-radius: 25px;
+    height: 580px;
+    background-color: #0359B7;
+    padding: 25px;
+    padding-top: 0;
+    overflow-y: auto;
+    width: 70%;
+}
+
+.book-list-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.book-list-container::-webkit-scrollbar-track {
+    background-color: #0359B7;
+}
+
+.book-list-container::-webkit-scrollbar-thumb {
+    background-color: #1b7ee8;
+    border-radius: 25px;
+}
+
+
+.book-input-field {
+    /* border: 1px solid red; */
+    background-color: #0359B7;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+.select-div {
+    /* border: 1px solid black; */
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.select-div select {
+    width: 385px;
+    padding: 10px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: #033F80;
+    color: #ffffff;
+    appearance: none;
+}
+
+.select-div .custom-caret {
+    position: relative;
+    transform: translate(-35px, 12px);
+    font-size: 15px;
+    color: white;
+}
+
+.search-field {
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.search-field input[type=text] {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: #D9D9D9;
+    padding: 10px;
+    width: 270px;
+}
+
+.search-field button {
+    border: none;
+    border-radius: 25px;
+    background-color: #FFC208;
+    color: #404040;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 590;
+    width: 100px;
+}
+
+.search-field button:hover {
+    transition: 0.4s;
+    background-color: #ebb307;
+}
+
+
+.display {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    height: 400px;
+}
+
+.book-box {
+    /* border: 1px solid black; */
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.display .book-box .book-desc h4,
+p {
+    color: #ffffff;
+    text-align: justify;
+}
+
+
+.inventory-row .add-book-div {
+    border-radius: 25px;
+    height: 580px;
+    background-color: #0359B7;
+    padding: 40px;
+    overflow-y: auto;
+    width: 30%;
+}
+
+.add-book-div h3 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0;
+}
+
+.add-book-div .add-book-form {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.add-book-form .input-box {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.add-book-form .input-box small {
+    color: #ffffff;
+    font-size: 14px;
+    width: 20%;
+    line-height: 35px;
+    text-align: right;
+}
+
+.add-book-form .input-box .desc {
+    vertical-align: text-top;
+}
+
+.add-book-form .input-box input[type=text],
+.input-box textarea {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #001F41;
+    color: #ffffff;
+    width: 80%;
+}
+
+.add-book-form .input-box textarea {
+    resize: none;
+}
+
+.add-book-form button {
+    border: none;
+    border-radius: 10px;
+    background-color: #ebb307;
+    color: #404040;
+    padding: 7px;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-left: 140px;
+    width: 80px;
+    border-radius: 30px;
+}
+
+.book-card {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.book-card img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.book-details {
+    flex: 1;
+}
+
+.book-details h2 {
+    margin-top: 0;
+}
+
+.input-box {
+    margin-bottom: 10px;
+}
+
+.add-book-btn {
+    padding: 500px;
+}

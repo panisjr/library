@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navigation">
+        <div class="container-fluid">
+            <div class="navbar-header navi-header">
+                <button class="navbar-brand">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+            </div>
+            <ul class="nav navbar-nav nav-selection">
+                <li><a class="nav-label-title">Inventory</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid content">
+        <p class="upper-label">
+            <a routerLink="/addbooks" class="text-button">Book List</a>
+        </p>
+        <div class="book-list-container">
+            <div class="book-input-field">
+                <div class="select-div">
+                    <select name="selection" id="bookSelection">
+                        <!-- Options will be dynamically added here -->
+                    </select>
+                    <label>
+                        <span class="glyphicon glyphicon-triangle-bottom custom-caret"></span>
+                    </label>
+                </div>
+                <div class="search-field">
+                    <input type="text" name="search" placeholder="">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <div class="display">
+                <div *ngFor="let book of books" class="book-card">
+                    <div>
+                        <div class="staticBook"></div>
+                        <qrcode [qrdata]="book.qrData"></qrcode>
+                        <h2>{{ book.name }}</h2>
+                        <p>Category: {{ book.category }}</p>
+                        <p>Description: {{ book.description }}</p>
+                        <button (click)="selectBook(book)" class="action-button">Edit</button>
+                        <button (click)="deleteBook(book.id)" class="action-button">Delete</button>
+                    </div>
+                </div>
+
+                <!-- Display selected book for editing -->
+                <div *ngIf="editingBook" class="edit-form">
+                    <h2>Edit Book</h2>
+                    <input type="text" [(ngModel)]="selectedBook.name" placeholder="Name"><br>
+                    <input type="text" [(ngModel)]="selectedBook.category" placeholder="Category"><br>
+                    <textarea [(ngModel)]="selectedBook.description" placeholder="Description"></textarea><br>
+                    <button (click)="editBook()" class="action-button">Save</button>
+                    <button (click)="cancelEdit()" class="action-button">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+
+    <script>
+        // Fetch book data from the server
+        fetch('http://localhost:3000/books')
+            .then(response => response.json())
+            .then(data => {
+                const books = data.books;
+                const selectElement = document.getElementById('bookSelection');
+                const displayElement = document.querySelector('.display');
+
+                // Populate select dropdown with book categories
+                books.forEach(book => {
+                    const option = document.createElement('option');
+                    option.textContent = book.category;
+                    selectElement.appendChild(option);
+                });
+
+                // Display book data
+                books.forEach(book => {
+                    const bookBox = document.createElement('div');
+                    bookBox.classList.add('book-box', 'row');
+                    bookBox.innerHTML = `
+                        <div class="img-box col-md-2">
+                            <div class="staticBook"></div>
+                        </div>
+                        <div class="book-desc col-md-5">
+                            <h4 class="book-title"><strong>${book.name}</strong></h4>
+                            <p class="category"><strong>Category:</strong> ${book.category}</p>
+                            <p class="description"><stronAg>Description:</strong> ${book.description}</p>
+                        </div>
+                    `;
+                    displayElement.appendChild(bookBox);
+                });
+            })
+            .catch(error => console.error('Error fetching book data:', error));
+    </script>
+</body>
+
+</html>
