@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a4d96;
+}
+
+.navigation {
+  background-color: #065ec0;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 12px;
+  margin-bottom: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* .navi-header {
+    border: 1px solid red;
+} */
+
+.navi-header img {
+  border-radius: 50%;
+}
+
+.navi-header button span {
+  font-size: 40px;
+}
+
+.nav-selection {
+  margin-left: 30px;
+  margin-top: 8px;
+}
+
+.nav-selection input[type="text"] {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  background-color: #d9d9d9;
+  color: #303030;
+  width: 300px;
+}
+
+.nav-selection input[type="text"]::placeholder {
+  color: #303030;
+}
+
+.nav-selection li .nav-label-title {
+  color: #ffffff !important;
+  font-size: 27px;
+  line-height: 38px;
+}
+
+.navi-right {
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.navi-right a {
+  text-decoration: none !important;
+  background-color: #e44c4c;
+  color: #2b2b2b;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.section {
+  /* border: 1px solid red; */
+  display: flex;
+  margin-top: 20px;
+  gap: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.section .nav {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 15%;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #0a4d96;
+}
+
+.section .nav a {
+  /* border: 1px solid red; */
+  border: 2px solid #0a4d96;
+  padding: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  width: fit-content;
+}
+
+.search-area input[type="text"] {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  background-color: #d9d9d9;
+  color: #303030;
+  width: 400px;
+}
+.profile {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url("./user-default.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* margin:  ; top right bottom left */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 942px; /* Adjust as needed based on the desired position */
+  transform: translateY(-50%);
+}
+.search-area input[type="text"]::placeholder {
+  color: #303030;
+}
+.section .nav a:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #ffc208;
+}
+
+.section .nav a:focus {
+  border-bottom: 2px solid #ffc208;
+}
+
+.section .view-panel {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  width: 85%;
+  height: 600px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #033f80;
+}
+
+.view-panel::-webkit-scrollbar {
+  width: 12px;
+}
+
+.view-panel::-webkit-scrollbar-track {
+  background-color: #0359b7;
+  display: none;
+}
+
+.view-panel::-webkit-scrollbar-thumb {
+  background-color: #135aa7;
+  border-radius: 25px;
+}
+
+.view-panel .categories-div {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* .categories-div .category {
+    border: 1px solid red;
+} */
+
+.category h4 {
+  color: #ffffff;
+}
+
+.categories-div .category .category-books {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.categories-div .category .category-books img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+#bookInfoModal {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#bookInfoModal .modal-content {
+  height: 400px !important;
+  background-color: #0a4d96;
+  color: #ffffff;
+}
+
+#bookInfoModal .info-section .modal-body {
+  padding: 20px;
+}
+
+#bookInfoModal .info-section {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* #bookInfoModal .info-section .div {
+    border: 1px solid red;
+} */
+
+#bookInfoModal .info-section .section1 p {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#bookInfoModal .info-section .section1 p.author {
+  padding-left: 30px;
+}
+
+#bookInfoModal .info-section .section2 {
+  padding: 10px;
+  padding-top: 60px;
+}
+
+#bookInfoModal .modal-body .borrow-book-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 7px;
+  width: 120px;
+  text-align: center;
+  background-color: #ffc208;
+  color: #303030;
+  margin-top: 40px;
+}
+
+#borrowModal .modal-dialog {
+  /* border: 1px solid red; */
+  width: 20%;
+  margin-top: 10%;
+}
+
+#borrowModal .modal-content {
+  background-color: #001f41;
+  color: #ffffff;
+}
+
+#borrowModal .confirm-borrow-btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #ffc208;
+  color: #303030;
+  padding: 7px;
+  width: 120px;
+  text-align: center;
+}
+
+#successModal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  z-index: 9999 !important;
+}
+
+#successModal .modal-dialog {
+  width: 60%;
+  margin-top: 30%;
+}
+
+#successModal .modal-content {
+  background-color: #001f41;
+  color: #ffffff;
+}
+
+#successModal .modal-body h5,
+#successModal .modal-body p {
+  text-align: center;
+}
+
+#successModal .close-modal-btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #ffc208;
+  color: #303030;
+  padding: 7px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}

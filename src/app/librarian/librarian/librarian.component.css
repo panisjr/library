@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #0a4d96;
+}
+
+.navigation {
+  background-color: #0a4d96;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  padding: 12px;
+  margin-bottom: 0px;
+}
+.logo {
+  width: 90px;
+  height: 90px;
+  background-image: url("./logo2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* margin:  ; top right bottom left */
+}
+.navbar {
+  border-bottom: 1px solid white;
+}
+.navigation a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px;
+  font-size: 16px;
+  text-align: center;
+}
+.navigation a:hover {
+  cursor: pointer;
+  color: gray;
+  transition: 0.2s;
+}
+
+/* .top-bar .search-area {
+    border: 1px solid red;
+} */
+
+.search-area input[type="text"] {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  background-color: #d9d9d9;
+  color: #303030;
+  width: 400px;
+}
+
+.search-area input[type="text"]::placeholder {
+  color: #303030;
+}
+
+.selection-dashboard .div {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  padding: 15px;
+}
+.issued-returned {
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+}
+.bookList {
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.menu {
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.group {
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+}
+.person {
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.reference {
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+.icons-fontSize {
+  font-size: 100px;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 542px; /* Adjust as needed based on the desired position */
+  transform: translateY(-50%);
+}

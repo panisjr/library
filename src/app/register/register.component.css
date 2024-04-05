@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.bg {
+  background-color: #183e85;
+}
+.logo {
+  width: 90px;
+  height: 90px;
+  background-image: url("./logo2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* margin:  ; top right bottom left */
+}
+.login-form {
+  margin-right: 70px;
+  padding: 30px;
+  width: 450px;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.login-button {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00b4d8;
+  border-radius: 5px;
+}
+.login-button:hover {
+  background-color: #90edef;
+  transition: 0.3s;
+}
+.undraw {
+  background-image: url("./register.svg");
+  background-position: center;
+  background-size: 500px;
+  background-repeat: no-repeat;
+}
+.forgot-password {
+  color: white;
+  text-decoration: none;
+}
+.forgot-password:hover {
+  color: #90edef;
+}

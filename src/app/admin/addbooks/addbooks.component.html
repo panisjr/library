@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navigation">
+      <div class="container-fluid">
+        <div class="navbar-header navi-header">
+          <button class="navbar-brand">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+          </button>
+        </div>
+        <ul class="nav navbar-nav nav-selection">
+          <li><a class="nav-label-title">Inventory</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid content">
+      <a routerLink="/inventory" class="upper-label">Back</a>
+
+      <div class="inventory-row">
+        <div class="div book-list-container">
+          <div class="book-input-field">
+            <div class="select-div">
+              <select name="selection" id="bookSelection"></select>
+              <label>
+                <span
+                  class="glyphicon glyphicon-triangle-bottom custom-caret"
+                ></span>
+              </label>
+            </div>
+
+            <div class="search-field">
+              <input type="text" name="search" placeholder="" />
+              <button>Search</button>
+            </div>
+          </div>
+
+          <div class="display">
+            <div *ngFor="let book of books" class="book-card">
+              <div>
+                <img src="/src/app/inventory/bookcover.jpg" alt="" />
+                <h2>{{ book.name }}</h2>
+                <p>Category: {{ book.category }}</p>
+                <p>Description: {{ book.description }}</p>
+                <ng-content></ng-content>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div add-book-div">
+          <h3>Add Books</h3>
+
+          <form class="add-book-form">
+            <form (submit)="addBook()">
+              <div class="input-box">
+                <small>File</small>
+                <input type="file" [(ngModel)]="photo" name="photo" />
+              </div>
+              <div class="input-box">
+                <small>Name</small>
+                <input type="text" [(ngModel)]="name" name="name" />
+              </div>
+              <div class="input-box">
+                <small>Category</small>
+                <input type="text" [(ngModel)]="category" name="category" />
+              </div>
+              <div class="input-box">
+                <small class="desc">Description</small>
+                <textarea
+                  [(ngModel)]="description"
+                  name="description"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <!-- Assuming photo is provided as base64 string -->
+              <button type="submit" class="add-book-btn">Add Book</button>
+            </form>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
